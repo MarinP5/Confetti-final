@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti | Receitas</title>
+    <link rel="stylesheet" href="css/receitastyle.css">
+    <link rel="icon" href="Icons/logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Lexend:wght@100..900&display=swap');
+    </style>
+	<script src="js/javarec.js" defer></script>
+</head>
+
+
+
+<body>
+
+
+    <nav class="navbar">
+	
+	<div class="menu-icon" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+	
+	
+    <div class="logo">
+    <a href="index.html"><img src="Icons/logo.png" alt="logo"></a>
+    </div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a class="inicio" href="receitas.html">Receitas</a></li>
+        <li><a href="#servicos">Sobre</a></li>
+    </ul>
+	<div class="nav-links mobile-menu">
+		
+        <a href="index.html">Início</a>
+        <a class="inicio" href="receitas.html">Receitas</a>
+        <a href="#servicos">Sobre</a>
+	
+    </div>
+	
+	
+    <form class="search-bar" action="/buscar" method="GET">
+        <input type="text" name="query" placeholder="Pesquisar..." aria-label="Pesquisar">
+        <button type="submit">
+        <img src="Icons/lupa.png" alt="Buscar">
+		</button>
+    </form>
+    
+    <!-- Imagem de Perfil -->
+    <div class="profile-pic">
+        <img src="Icons/perfil.jfif" alt="Imagem de Perfil">
+    </div>
+</nav>
+	
+<header class="main-header">
+    <h1>Receitas</h1>
+</header>
+
+
+<div class="category-buttons">
+    <button class="scroll-btn" data-target="#bolos">Bolos</button>
+    <button class="scroll-btn" data-target="#massas">Massas e Roscas</button>
+	<button class="scroll-btn" data-target="#tortas">Tortas</button>
+    <button class="scroll-btn" data-target="#doces">Docinhos</button>
+	<button class="scroll-btn" data-target="#gelados">Gelados</button>
+	<button class="scroll-btn" data-target="#saudavel">Saudáveis</button>
+
+</div>
+
+
+ <main>
+    <section class="highlighted-recipes" id="receitas">
+	<section id="bolos">
+    <h2>Bolos:</h2>
+    <div class="recipes-container">
+        <a href="bolodemorango.html" class="recipe-card">
+			<img src="Doces/bolo de morango.jfif" alt="Receita 1">
+            <h3>Bolo de Morango</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>40 min</h3>
+			
+        </a>
+        <div class="recipe-card">
+            <img src="Doces/bolochocolate.jpeg" alt="Receita 2">
+            <h3>Bolo Floresta Negra</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/cupcake.jpeg" alt="Receita 3">
+            <h3>Cupcake de Limão</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+				<img src="estrela.png" alt="Estrela" class="star">
+                
+            </div>
+            <h3>1h 20 min</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/redvelvet.jpeg" alt="Receita 4">
+            <h3>Bolo Red Velvet</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 30 min</h3>
+        </div>
+    </div>
+	 <a href="bolos.html" class="ver-mais-btn">Ver Mais</a>
+</section> </section> </main>
+
+<main>
+    <section class="highlighted-recipes" id="receitas">
+	<section id="massas">
+    <h2>Massas e Roscas:</h2>
+    <div class="recipes-container">
+        <div class="recipe-card">
+            <img src="Doces/bomba.jfif" alt="Receita 2">
+            <h3>Bomba de Creme</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 10 min</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/strawberry donuts.jfif" alt="Receita 2">
+            <h3>Donuts de Morango</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>40 min</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/croissant.jfif" alt="Receita 3">
+            <h3>Croissant Simples</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                
+            </div>
+            <h3>40 min </h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/rosca.jpeg" alt="Receita 4">
+            <h3>Rosca de Especiarias</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 20 min</h3>
+        </div>
+    </div>
+	<a target="_blank" class="ver-mais-btn">Ver Mais</a>
+	</section>
+</section> </main>
+
+
+<main>
+    <section class="highlighted-recipes" id="receitas">
+	<section id="tortas">
+    <h2>Tortas:</h2>
+    <div class="recipes-container">
+        <div class="recipe-card">
+            <img src="Doces/torta.jfif" alt="Receita 2">
+            <h3>Torta de Morango</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 20 min</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/maça.jpeg" alt="Receita 2">
+            <h3>Torta de Maçã</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 30 min</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/banoffee.jpeg" alt="Receita 3">
+            <h3>Torta de Banoffee</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                
+            </div>
+            <h3>1h </h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/tart.jpeg" alt="Receita 4">
+            <h3>Tortinhas de Frutas Vermelhas</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 10 min</h3>
+        </div>
+    </div>
+	<a target="_blank" class="ver-mais-btn">Ver Mais</a>
+	</section>
+</section> </main>
+
+<main>
+    <section class="highlighted-recipes" id="receitas">
+	<section id="doces">
+    <h2>Docinhos:</h2>
+    <div class="recipes-container">
+        <div class="recipe-card">
+            <img src="Doces/Mel.jfif" alt="Receita 2">
+            <h3>Pão de Mel</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>50 min</h3>
+        </div>
+       <div class="recipe-card">
+            <img src="Doces/Pudim.jfif" alt="Receita 2">
+            <h3>Pudim de Leite</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/entremet.jfif" alt="Receita 3">
+            <h3>Entremet de Manga</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                
+            </div>
+            <h3>1h </h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/brigadeiro.jpeg" alt="Receita 4">
+            <h3>Brigadeiro</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>20 min</h3>
+        </div>
+    </div>
+	<a target="_blank" class="ver-mais-btn">Ver Mais</a>
+	</section>
+</section> </main>
+
+<main>
+    <section class="highlighted-recipes" id="receitas">
+	<section id="gelados">
+    <h2>Gelados:</h2>
+    <div class="recipes-container">
+        <div class="recipe-card">
+            <img src="Doces/banana.jfif" alt="Receita 2">
+            <h3>Pudim de Banana</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>40 min</h3>
+        </div>
+       <div class="recipe-card">
+            <img src="Doces/sorvete.jfif" alt="Receita 2">
+            <h3>Sorvete Cookies and Cream</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 20 min</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/sorbet.jfif" alt="Receita 3">
+            <h3>Sorbet de Morango</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+				<img src="estrela.png" alt="Estrela" class="star">
+                
+            </div>
+            <h3>30 min </h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/pave.jfif" alt="Receita 4">
+            <h3>Pavê Tradicional</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h</h3>
+        </div>
+    </div>
+	<a target="_blank" class="ver-mais-btn">Ver Mais</a>
+	</section>
+</section> </main>
+
+<main>
+    <section class="highlighted-recipes" id="receitas">
+	<section id="saudavel">
+    <h2>Saudáveis:</h2>
+    <div class="recipes-container">
+        <div class="recipe-card">
+            <img src="Doces/chocomousse.jfif" alt="Receita 2">
+            <h3>Mousse de Chocolate Diet</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>50 min</h3>
+        </div>
+       <div class="recipe-card">
+            <img src="Doces/crepe.jfif" alt="Receita 2">
+            <h3>Crepe Low Carb</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+          
+            </div>
+            <h3>20 min</h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/mousseframb.jfif" alt="Receita 3">
+            <h3>Mousse de Franboesa Diet</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+				<img src="estrela.png" alt="Estrela" class="star">
+                
+            </div>
+            <h3>50 min </h3>
+        </div>
+        <div class="recipe-card">
+            <img src="Doces/bololimao.jfif" alt="Receita 4">
+            <h3>Bolo de Limão</h3>
+            <div class="rating">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+                <img src="estrela.png" alt="Estrela" class="star">
+            </div>
+            <h3>1h 20 min</h3>
+        </div>
+    </div>
+	<a target="_blank" class="ver-mais-btn">Ver Mais</a>
+	</section>
+</section> </main>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section contact">
+            <h3>Contato</h3>
+            <p>Email: contato@confetti.com</p>
+            <p>Telefone: (11) 3567-2334</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

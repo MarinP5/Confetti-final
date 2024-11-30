@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti | Bolo de Morango</title>
+    <link rel="stylesheet" href="css/bolostyle.css">
+    <link rel="icon" href="Icons/logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Lexend:wght@100..900&display=swap');
+    </style>
+	<script src="js/javabolo.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+	
+		<div class="menu-icon" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+	
+        <div class="logo">
+            <a href="index.html"><img src="Icons/logo.png" alt="logo"></a>
+        </div>
+		
+		
+        <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="#servicos">Sobre</a></li>
+    </ul>
+	
+	<div class="nav-links mobile-menu">
+        <a href="index.html">Início</a>
+        <a href="receitas.html">Receitas</a>
+        <a href="#servicos">Sobre</a>
+    </div>
+	
+	
+    <form class="search-bar" action="/buscar" method="GET">
+        <input type="text" name="query" placeholder="Pesquisar..." aria-label="Pesquisar">
+        <button type="submit">
+        <img src="Icons/lupa.png" alt="Buscar">
+		</button>
+    </form>
+		
+		
+        <div class="profile-pic">
+            <img src="Icons/perfil.jfif" alt="Imagem de Perfil">
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+			<div class="image-column">
+                <img src="Doces/bolo de morango.jfif" alt="Bolo de Ninho com Morango" class="cake-image">
+            </div>
+            <div class="text-column">
+                <h1 class="title">Bolo de Morango</h1>
+                <div class="rating">
+                    <img src="estrela.png" alt="Estrela" class="star">
+                    <img src="estrela.png" alt="Estrela" class="star">
+                    <img src="estrela.png" alt="Estrela" class="star">
+                    <img src="estrela.png" alt="Estrela" class="star">
+                    <img src="estrela.png" alt="Estrela" class="star">
+                    <span style="margin-left: 10px; font-size: 14px;">4.8 (30 avaliações)</span>
+                </div>
+                <div class="info">40 minutos de preparo</div>
+				<div class="icons-row">
+			<img src="Icons/comentario.png" alt="Ícone 1" class="icon" onclick="scrollToComments()">
+			<img src="Icons/favorito.png" alt="Ícone 2" class="icon" id="favorite-icon" onclick="changeFavoriteIcon()">
+
+			<div class="share-container">
+    <!-- Ícone de Compartilhar -->
+    <button id="share-btn" onclick="togglePopup()">
+        <img src="icons/compartilhar.png" alt="Compartilhar">
+    </button>
+
+    <!-- Pop-up de Compartilhamento -->
+    <div id="share-popup" class="share-popup">
+        <div class="popup-content">
+            <!-- Botões com imagens para compartilhar -->
+            <button class="share-option" onclick="shareOnFacebook()">
+                <img src="Icons/facebook.png" alt="Compartilhar no Facebook">
+            </button>
+            <button class="share-option" onclick="shareOnTwitter()">
+                <img src="icons/instagram.png" alt="Compartilhar no Instagram">
+            </button>
+            <button class="share-option" onclick="shareOnWhatsapp()">
+                <img src="icons/whatsapp.png" alt="Compartilhar no WhatsApp">
+            </button>
+            
+            <!-- Botão para copiar o link -->
+            <button class="share-option" onclick="copyLink()">
+                <img src="icons/link.png" alt="Copiar Link">
+            </button>
+
+        </div>
+    </div>
+</div>
+
+			</div>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="description">
+            Um bolo de leite ninho com morango é uma delícia que une o sabor suave e cremoso do leite ninho com a frescura e leve acidez dos morangos frescos. Esse bolo tem uma massa fofa e delicada, recheada com um creme de leite ninho aveludado, que derrete na boca, e pedaços de morangos suculentos, que acrescentam uma textura e sabor refrescante.  Coberto com mais creme de leite ninho, ele é decorado com morangos inteiros e ralado de leite ninho por cima, criando uma apresentação charmosa e irresistível. Cada pedaço é uma combinação perfeita de doçura e leveza, ideal para qualquer ocasião especial ou para dar aquele toque doce no dia a dia.
+        
+		<div class="video">
+    
+		
+	<div class="video-container">
+    <video class="video" controls>
+        <source src="Doces/bolo.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+</div>
+
+
+		</div>
+	
+		
+		</div>
+		<hr class="divisao">
+		
+		<ul class="ingredientes">
+		<h2> Ingredientes </h2>
+		<h3> Massa </h3>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/farinha.png" class="icon-img"> 1 xícara de chá de farinha de trigo</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/ovos.png" class="icon-img"> 3 ovos</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/farinha.png" class="icon-img"> 1 xícara de açúcar</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/leite.png" class="icon-img"> 1/2 xícara de leite</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/gota.png" class="icon-img"> 1/3 xícara de óleo</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/farinha.png" class="icon-img"> 1 colher de sopa de fermento químico</li>
+
+			<h3> Recheio </h3>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/gota.png" class="icon-img"> 1/2 caixa de leite condensado</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/gota.png" class="icon-img"> 1/2 caixa de creme de leite</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/farinha.png" class="icon-img"> 2 colheres de sopa de amido de milho</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/leite.png" class="icon-img"> 1 xícara de leite</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/morango.png" class="icon-img"> 1 caixa de morangos</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/farinha.png" class="icon-img"> 1 xícara de chá de leite em pó</li>
+
+			<h3> Cobertura </h3>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/leite.png" class="icon-img"> 1 caixa de chantilly</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/gota.png" class="icon-img"> 3 colheres de sopa de leite condensado</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/farinha.png" class="icon-img"> 3 colheres de sopa de leite em pó</li>
+		<li><input type="checkbox" id="item1" class="checkbox"><img src="icons/morango.png" class="icon-img"> Morangos a gosto</li>
+</ul>
+
+<hr class="divisao">
+<h2> Modo de Preparo </h2>
+<div class="contain">
+ <ol>
+        <li>Para a massa, em uma batedeira, coloque os ovos, o açúcar, o leite e bata bem.</li>
+        <li>Adicione o óleo e bata novamente.</li>
+        <li>Depois, acrescente a farinha e bata até ficar homogêneo.</li>
+        <li>Por fim, junte o fermento e misture delicadamente.</li>
+        <li>Transfira a massa para uma forma untada e leve para assar em forno preaquecido a 180 °C por 40 minutos.</li>
+        <li>Para o recheio, em uma panela, coloque o leite condensado, o creme de leite, o amido de milho, o leite Ninho e misture bem.</li>
+        <li>Adicione o leite e misture novamente.</li>
+        <li>Leve a mistura para cozinhar em fogo médio e cozinhe até formar um creme consistente e homogêneo.</li>
+        <li>Para a cobertura, em uma batedeira, coloque o chantilly gelado, o creme de leite, o leite Ninho e bata até dar o ponto de chantilly.</li>
+        <li>Assim que a massa estiver fria, corte o bolo ao meio e molhe com um pouco de leite.</li>
+        <li>Espalhe o recheio por cima, adicione os morangos picados e tampe com o restante da massa.</li>
+        <li>Molhe com mais leite e finalize com chantilly e morangos inteiros.</li>
+    </ol>
+</div>
+
+<hr class="divisao">
+
+<h2> Dicas </h2>
+
+<div class="dicas">
+<div class="contain">
+		<li> Troque 1/4 da farinha de trigo por amido de milho para um bolo mais fofinho.</li>
+		<li> O fermento deve ser adicionado por último e misturado com cuidado para garantir que seu bolo não sole.</li>
+		<li> O melhor momento de desenformar é quando o bolo está morno, nem muito quente, nem muito frio. </li>
+		<li> Você pode adicionar algumas gotas de essência de baunilha na massa e no recheio para dar um gostinho a mais.</li>
+</div>
+</div>
+ </main>
+<hr class="divisao">
+
+<h2> Comentários </h2>
+
+<section class="comments-section">
+ 
+  <div class="comment">
+    <p class="comment-text">"Esse bolo ficou incrível! A textura estava perfeita e o sabor maravilhoso!"</p>
+    <p class="comment-author">- Maria Lou</p>
+    <div class="comment-rating">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+</div>
+  </div>
+
+  <div class="comment">
+    <p class="comment-text">"Fiz para um evento e todos adoraram! Vou fazer novamente com certeza."</p>
+    <p class="comment-author">- Alex Santos</p>
+    <div class="comment-rating">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    
+</div>
+  </div>
+
+  <div class="comment">
+    <p class="comment-text">"Receita fácil de seguir e o bolo fica delicioso. Aprovado!"</p>
+    <p class="comment-author">- Gabi Sousa</p>
+    <div class="comment-rating">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+    <img src="estrela.png" alt="estrela">
+</div>
+
+  </div>
+<button class="load-more-btn">Ver Mais Comentários</button>
+
+  <div class="add-comment">
+    <h3>Adicione seu comentário</h3>
+    <form id="review-form">
+      <label for="rating">Avaliação:</label>
+      <select id="rating" name="rating">
+        <option value="5">5 Estrelas</option>
+        <option value="4">4 Estrelas</option>
+        <option value="3">3 Estrelas</option>
+        <option value="2">2 Estrelas</option>
+        <option value="1">1 Estrela</option>
+      </select>
+
+      <label for="comment">Comentário:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+      
+      <button type="submit">Enviar Comentário</button>
+	  <div id="success-message">Seu comentário foi adicionado com sucesso!</div>
+    </form>
+  </div>
+</section>
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section contact">
+                <h3>Contato</h3>
+                <p>Email: contato@confetti.com</p>
+                <p>Telefone: (11) 3567-2334</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

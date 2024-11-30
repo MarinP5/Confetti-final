@@ -1,0 +1,672 @@
+
+
+body {
+    font-family: 'Lexend';
+}
+
+
+
+/* barra de navegação*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF0C7;
+    padding: 5px 5px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5%;
+    flex-grow: 1;
+    justify-content: left;
+	padding-left: 50px;
+	font-size: 20px;
+}
+
+	.nav-links a {
+    color: #FF8AAB;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+	
+}
+	.nav-links .inicio {
+    background: #FF8AAB;
+	color: #FFF0C7;
+}
+	.nav-links.mobile-menu .inicio {
+    background: #FF8AAB;
+	color: #FFF0C7;
+}
+
+	.nav-links a:hover {
+    background: #FF8AAB;
+	color: #FFF0C7;
+}
+
+.menu-icon {
+	margin-left: 5px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #FF8AAB;
+    border-radius: 4px;
+}
+
+
+.nav-links.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #FFF0C7;
+    width: 250px;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.nav-links.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.nav-links.mobile-menu a {
+    padding: 15px 0;
+    font-size: 18px;
+    color: #FF8AAB;
+    text-decoration: none;
+}
+
+.nav-links.mobile-menu a:hover {
+    background: #FF8AAB;
+    color: #FFF0C7;
+}
+
+.logo img {
+    height: auto;
+    width: 100%;
+}
+.logo{
+	margin: 10px;
+    height: auto;
+    width: 4%;
+}
+.search-profile {
+    display: flex;
+	flex-direction: 2;
+    align-items: right;
+	width: 50%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: right;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+	margin: 10px;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+	font-family: Lexend;
+	font-size: 20px;
+}
+
+
+.search-bar button {
+    background-color: #FF8AAB;
+    border: none;
+    border-radius: 10px;  
+    padding: 8px 12px;   
+    display: flex;      
+    justify-content: center;
+    align-items: center;       
+    width: 40px;         
+    height: 40px;         
+}
+
+
+.search-bar button img {
+    width: 24px;  
+    height: 24px;
+}
+
+.profile-pic{
+    width: 3%;
+    height: auto;
+	margin: 10px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+/* header */
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffdede;
+	height: auto;
+}
+
+.text-column {
+    flex: 1;
+    padding-left: 20px;
+	width: 50%;
+}
+
+.image-column {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 50%;
+
+}
+
+.cake-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 60px;
+    color: #FF8AAB;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+	color: #FF8AAB;
+	font-size: 30px;
+}
+
+.rating img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.info {
+    font-size: 16px;
+    margin-top: 10px;
+	color: #FF8AAB;
+	font-size: 30px;
+}
+
+.icons-row {
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    margin: 20px 0;
+	padding-top: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+
+.share-container {
+    position: relative;
+    display: inline-block;
+}
+#share-btn {
+    background: transparent; 
+    border: none; 
+}
+
+#share-btn img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.share-popup {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: auto; 
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 9999;
+}
+
+
+.share-popup .popup-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.share-option {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.share-option img {
+    width: 40px; 
+    height: auto;
+}
+
+
+
+.comment-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+/* indrodução */
+
+
+.description {
+    margin-top: 40px;
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+	text-indent: 40px;
+}
+
+.video-container {
+    width: 80%; /* Define a largura do contêiner */
+    max-width: 800px; /* Define um tamanho máximo opcional */
+    margin: 0 auto; /* Centraliza o contêiner */
+	margin-top: 20px;
+    border-radius: 5px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que bordas arredondadas afetem o vídeo */
+}
+
+video {
+    display: block; /* Remove espaçamento extra */
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+    border-radius: 5px; /* Aplica bordas arredondadas */
+}
+
+
+
+
+.divisao {
+    border: none;
+    height: 4px; 
+    background-color: #ffcb37; 
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+
+/* receita */
+
+
+h2, h3 {
+	color: #FF8AAB;
+	padding: 10px;
+	margin-left: 20px;
+}
+
+h2 {
+	font-size: 40px;
+	justify-content: center;
+	}
+	
+h3 {
+	font-size: 30px;
+}
+
+.ingredientes {
+    list-style-type: none; 
+    padding: 0;
+	margin-left: 18px;
+}
+
+.ingredientes li {
+    display: flex; /* Faz com que o ícone e o texto fiquem na mesma linha */
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+    margin-bottom: 10px; /* Espaço entre os itens */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+	margin-left: 20px;
+	line-height: 1.6;
+}
+
+input[type="checkbox"] {
+    accent-color: #FF8AAB; /* Cor rosa */
+}
+
+.icon-img {
+    width: 30px; /* Tamanho do ícone */
+    height: 30px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+	margin-left: 10px;
+    object-fit: cover; /* Garante que a imagem ocupe o espaço sem distorcer */
+}
+
+
+
+.contain {
+    max-width: 70%; /* Define a largura máxima da área de texto */
+    
+    padding: 20px;
+}
+  ol {
+    font-size: 18px;
+    margin-left: 60px;
+	margin-right: 20px;
+	margin-top: 20px;
+    padding-left: 0;
+	text-align: justify;
+}
+
+        
+ ol li {
+    margin-bottom: 20px;
+}
+
+ol li::marker {
+	font-weight: bold;
+	color: #FF8AAB;
+    font-size: 18px; 
+}
+
+.dicas {
+	font-size: 18px;
+    margin-left: 60px;
+	margin-right: 20px;
+	margin-top: 20px;
+    padding-left: 0;
+	font-size: 18px;
+	text-align: justify;
+}
+
+.dicas li::marker {
+	font-weight: bold;
+	color: #FF8AAB;
+    font-size: 18px; 
+}
+	
+	
+
+/* Estilo da seção de comentários */
+.comments-section {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo dos comentários */
+.comment {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #666;
+}
+.comment-rating img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.load-more-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #FF8AAB;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more-btn:hover {
+  background-color: #fa789d;
+}
+
+
+.add-comment {
+  margin-top: 30px;
+}
+
+.add-comment h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.add-comment form label {
+  display: block;
+  font-size: 14px;
+  margin: 8px 0 4px;
+}
+
+.add-comment form input,
+.add-comment form select,
+.add-comment form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Lexend;
+}
+
+
+
+
+.add-comment form textarea {
+  resize: none;
+}
+
+.add-comment form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FF8AAB;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: Lexend;
+}
+
+.add-comment form button:hover {
+  background-color: #fa789d;
+}
+
+
+
+
+#success-message {
+  display: none;
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.footer {
+    background-color: #FFF0C7;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background-color: #fae3a2;
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+	
+	
+ .container {
+        flex-direction: column; /* Empilha os itens na vertical */
+        align-items: center;   /* Centraliza os itens */
+    }
+
+    .image-column {
+        width: 100%;  /* A imagem ocupa toda a largura */
+		height: 10%;
+		object-fit: cover;
+    }
+	
+	.cake-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}	
+    .text-column {
+        width: 100%; 
+        text-align: center; 
+        padding: 10px; 
+    }
+
+.rating {
+justify-content: center;}
+
+.contain {
+    max-width: 100%; 
+    padding: 20px;
+}
+	
+.nav-links {
+    display: none;
+}
+    
+.menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+.search-bar {
+        width: 50%; /* Ajusta a largura para 80% em telas menores */
+        margin: 0 auto; /* Centraliza a barra de pesquisa */
+    }
+
+.search-bar input[type="text"] {
+        font-size: 14px; /* Ajusta o tamanho da fonte para o mobile */
+    }
+
+.search-bar button {
+        width: 30px;   /* Mantém o tamanho do botão */
+        height: 30px;  /* Tamanho fixo do botão */
+}
+
+.search-bar button img {
+        width: 20px;   /* Ajuste do ícone para o mobile, caso precise ser menor */
+        height: 20px;  /* Ajuste da altura do ícone */
+ }
+
+.logo{
+    height: auto;
+    width: 10%;
+	margin-left: 10px;
+}
+.profile-pic{
+    width: 7%;
+	height: auto;
+    
+}
+
+.footer{
+	font-size: 12px;
+	padding: 10px;
+}
+}

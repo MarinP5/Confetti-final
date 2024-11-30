@@ -1,0 +1,409 @@
+ç  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lexend;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF0C7;
+    padding: 5px 5px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5%;
+    flex-grow: 1;
+    justify-content: left;
+	padding-left: 50px;
+	font-size: 20px;
+}
+
+	.nav-links a {
+    color: #FF8AAB;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+	
+}
+	.nav-links .inicio {
+    background: #FF8AAB;
+	color: #FFF0C7;
+}
+	.nav-links.mobile-menu .inicio {
+    background: #FF8AAB;
+	color: #FFF0C7;
+}
+
+	.nav-links a:hover {
+    background: #FF8AAB;
+	color: #FFF0C7;
+}
+
+.menu-icon {
+	margin-left: 5px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #FF8AAB;
+    border-radius: 4px;
+}
+
+
+.nav-links.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #FFF0C7;
+    width: 250px;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.nav-links.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.nav-links.mobile-menu a {
+    padding: 15px 0;
+    font-size: 18px;
+    color: #FF8AAB;
+    text-decoration: none;
+}
+
+.nav-links.mobile-menu a:hover {
+    background: #FF8AAB;
+    color: #FFF0C7;
+}
+
+.logo img {
+    height: auto;
+    width: 100%;
+}
+.logo{
+	margin: 10px;
+    height: auto;
+    width: 4%;
+}
+.search-profile {
+    display: flex;
+	flex-direction: 2;
+    align-items: right;
+	width: 50%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: right;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+	margin: 10px;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+	font-family: Lexend;
+	font-size: 20px;
+}
+
+
+.search-bar button {
+    background-color: #FF8AAB;
+    border: none;
+    border-radius: 10px;  
+    padding: 8px 12px;   
+    display: flex;      
+    justify-content: center;
+    align-items: center;       
+    width: 40px;         
+    height: 40px;         
+}
+
+
+.search-bar button img {
+    width: 24px;  
+    height: 24px;
+}
+
+.profile-pic{
+    width: 3%;
+    height: auto;
+	margin: 10px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+
+
+
+
+
+.main-header {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffdede; 
+    color: #FF8AAB; 
+    font-family: 'Lexend', sans-serif; 
+    font-size: 36px;
+}
+
+
+
+
+
+.category-buttons {
+    display: flex;
+	 flex-wrap: wrap; 
+    gap: 10px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 20px;
+}
+
+.scroll-btn {
+    background-color: #FF8AAB; /* Rosa */
+    color: #FFF0C7; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+	font-family: Lexend;
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s, transform 0.2s; /* Suaviza efeitos */
+}
+
+.scroll-btn:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+	background-color: #FFF0C7; /* Rosa */
+    color: #FF8AAB; /* Texto branco */
+}
+
+.scroll-btn:active {
+    background-color: #ffcb37; /* Cor mais escura ao clicar */
+    transform: scale(0.95); /* Leve redução ao clicar */
+}
+
+
+
+
+
+.highlighted-recipes {
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+.highlighted-recipes h2 {
+    color: #FF8AAB;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+	
+}
+.recipes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px
+}
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF0C7;
+    color: #FF8AAB;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+	text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.recipe-card:hover {
+    background-color: #FF8AAB; 
+    color: #FFF0C7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+    width: 90%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover img {
+    transform: scale(1.03);
+}
+
+
+.rating {
+    display: flex;
+    justify-content: left;
+    margin: 10px 0;
+	
+}
+.rating img {
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+	object-fit: contain;
+	text-align: left;
+}
+
+
+/* Estilo para o botão "Ver Mais" */
+.ver-mais-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF8AAB; /* Cor verde */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover para o botão */
+.ver-mais-btn:hover {
+    background-color: #fa789d; /* Cor mais escura no hover */
+}
+
+
+
+.footer {
+    background-color: #FFF0C7;
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background-color: #fae3a2;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* media para telas menores */
+
+
+@media only screen and (max-width: 900px) {
+	
+
+.recipes-container {
+flex-wrap: wrap;}
+}
+
+@media only screen and (max-width: 800px) {
+	
+	
+	
+.nav-links {
+    display: none;
+}
+    
+.menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+.search-bar {
+        width: 50%; /* Ajusta a largura para 80% em telas menores */
+        margin: 0 auto; /* Centraliza a barra de pesquisa */
+    }
+
+.search-bar input[type="text"] {
+        font-size: 14px; /* Ajusta o tamanho da fonte para o mobile */
+    }
+
+.search-bar button {
+        width: 30px;   /* Mantém o tamanho do botão */
+        height: 30px;  /* Tamanho fixo do botão */
+}
+
+.search-bar button img {
+        width: 20px;   /* Ajuste do ícone para o mobile, caso precise ser menor */
+        height: 20px;  /* Ajuste da altura do ícone */
+ }
+
+.logo{
+    height: auto;
+    width: 10%;
+	margin-left: 10px;
+}
+.profile-pic{
+    width: 7%;
+	height: auto;
+    
+}
+
+.footer{
+	font-size: 12px;
+	padding: 10px;
+}
+}
